@@ -13,4 +13,7 @@
     </bean>
 
     <bean id="person" class="model.Person"></bean>
+
+    <bean id="user" class="model.UserBean"></bean>
+
 </beans>
