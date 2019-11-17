@@ -12,7 +12,8 @@
 
     </bean>
     <bean id="ClearAir" class="model.ClearAir"></bean>
-    <bean id="xmlConllectionsDemo" class="model.XmlCollectionsDemo">
+<!-- 直接在这里调用其初始化方法和销毁方法-->
+    <bean id="xmlConllectionsDemo" class="model.XmlCollectionsDemo" init-method="InitMethod" destroy-method="DestoryMethod">
 
         <property name="name">
             <value>125468</value>
@@ -53,7 +54,6 @@
         </property>
 
         <property name="date" value="2018-8-20"/>
-
-
     </bean>
+
 </beans>

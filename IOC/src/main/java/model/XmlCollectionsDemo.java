@@ -71,6 +71,14 @@ public class XmlCollectionsDemo {
         this.maps = maps;
     }
 
+    //初始化 和销毁
+    public void DestoryMethod(){
+        System.out.println("销毁");
+    }
+
+    public void InitMethod(){
+        System.out.println("初始化");
+    }
 
     public static void main(String[] args) {
         ApplicationContext context=new ClassPathXmlApplicationContext(new String[]{"ApplicationContextOne.xml"});
@@ -85,6 +93,8 @@ public class XmlCollectionsDemo {
         System.out.println(annotationInstance.sets);
         System.out.println(annotationInstance.maps);
         System.out.println(annotationInstance.date);
+
+        annotationInstance.DestoryMethod();
 
     }
 
