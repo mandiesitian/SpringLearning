@@ -2,7 +2,7 @@ package model;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component(value = "dirtyAir")
 public class DirtyAir implements IAir{
     @Override
     public String toString() {

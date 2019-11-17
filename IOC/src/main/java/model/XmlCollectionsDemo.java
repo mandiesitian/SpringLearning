@@ -16,17 +16,17 @@ public class XmlCollectionsDemo {
 
     private Map<String, Object> maps;
 
-    private  String name;
+    private  String names;
 
-    private Date date;  //需要注入的属性
+    private Date date;  //需要注入的属性s
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNames(String name) {
+        this.names = name;
     }
 
-    public String getName() {
-        return name;
-    }
+//    public String getName() {
+//        return name;
+//    }
 
 
     public Date getDate() {
@@ -87,7 +87,7 @@ public class XmlCollectionsDemo {
         XmlCollectionsDemo annotationInstance = (XmlCollectionsDemo) factory.getBean("xmlConllectionsDemo");
 
 
-        System.out.println(annotationInstance.name);
+        System.out.println(annotationInstance.names);
         System.out.println(annotationInstance.list);  //赋值了（注入了） 就有值了  没有注入就是null
         System.out.println(annotationInstance.pros);
         System.out.println(annotationInstance.sets);

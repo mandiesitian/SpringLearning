@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class Person {
     IAir air;
     @Autowired  //构造方法自动装载对象
-    public Person(@Qualifier("dirtyair") IAir air){
+    public Person(@Qualifier("dirtyAir") IAir air){
         this.air=air;
     }
     public void Breath(){

@@ -15,7 +15,7 @@
 <!-- 直接在这里调用其初始化方法和销毁方法-->
     <bean id="xmlConllectionsDemo" class="model.XmlCollectionsDemo" init-method="InitMethod" destroy-method="DestoryMethod">
 
-        <property name="name">
+        <property name="names">
             <value>125468</value>
         </property>
 

@@ -3,17 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-    <context:component-scan base-package="model"/>
-<!--    <bean id="ClearAir" class="model.ClearAir">-->
-<!--        <qualifier value="cleanair"></qualifier>-->
-<!--    </bean>-->
 
-<!--    <bean id="DirtyAir" class="model.DirtyAir">-->
-<!--        <qualifier value="dirtyair"></qualifier>-->
-<!--    </bean>-->
+    <context:annotation-config/>
+    <bean id="annontationInstance" class="model.AnnontationInstance"/>
 
-<!--    <bean id="person" class="model.Person"></bean>-->
-
-<!--    <bean id="user" class="model.UserBean"></bean>-->
-
+    <bean id="clearair" class="model.ClearAir">
+    <qualifier value="cleanair"></qualifier>
+</bean>
 </beans>
