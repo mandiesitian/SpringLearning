@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- 属性对应的配置文件-->
+    <bean id="custonEditorConfigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="java.util.Date" value="model.CustomerProperty"></entry>
+            </map>
+        </property>
+
+    </bean>
+    <bean id="ClearAir" class="model.ClearAir"></bean>
+    <bean id="xmlConllectionsDemo" class="model.XmlCollectionsDemo">
+
+        <property name="name">
+            <value>125468</value>
+        </property>
+
+
+        <property name="List">
+            <list>
+                <value>1</value>
+                <ref bean="ClearAir"/>
+                <bean class="model.ClearAir"/>
+            </list>
+        </property>
+
+        <property name="sets">
+            <set>
+                <value>1</value>
+                <ref bean="ClearAir"/>
+                <bean class="model.ClearAir"/>
+            </set>
+        </property>
+
+        <property name="maps">
+            <map>
+                <entry key="key1" value="1"></entry>
+                <entry key="key2" value-ref="ClearAir"></entry>
+                <entry key="key3">
+                    <bean class="model.ClearAir"/>
+                </entry>
+            </map>
+        </property>
+
+        <property name="pros">
+            <props>
+                <prop key="prokey1">prokeyA</prop>
+                <prop key="prokey2">prokeyB</prop>
+            </props>
+        </property>
+
+        <property name="date" value="2018-8-20"/>
+
+
+    </bean>
+</beans>
