@@ -12,7 +12,7 @@ import javax.annotation.PostConstruct;
 
 @Component(value = "userlive")
 public class UserBeanLive implements BeanNameAware, BeanFactoryAware, InitializingBean, DisposableBean,
-        ApplicationContextAware, BeanPostProcessor {
+        ApplicationContextAware {
 
     //先调用构造方法
     public UserBeanLive() {
@@ -45,10 +45,10 @@ public class UserBeanLive implements BeanNameAware, BeanFactoryAware, Initializi
 
     //  BeanPostProcessor 接口 两个方法
     //方法一 初始化前调用
-    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("BeanPostProcessor-->postProcessBeforeInitialization被调用");
-        return bean;
-    }
+//    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+//        System.out.println("BeanPostProcessor-->postProcessBeforeInitialization被调用");
+//        return bean;
+//    }
 
     //初始化 InitializingBean  两个方法同一个效果
     public void afterPropertiesSet() throws Exception {
@@ -62,10 +62,10 @@ public class UserBeanLive implements BeanNameAware, BeanFactoryAware, Initializi
 
     //  BeanPostProcessor 接口 两个方法
     //方法二 初始化后调用
-    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("BeanPostProcessor-->postProcessAfterInitialization被调用");
-        return bean;
-    }
+//    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+//        System.out.println("BeanPostProcessor-->postProcessAfterInitialization被调用");
+//        return bean;
+//    }
 
     //销毁
     public void destroy() throws Exception {

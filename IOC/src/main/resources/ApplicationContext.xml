@@ -16,4 +16,6 @@
 
 <!--    <bean id="user" class="model.UserBean"></bean>-->
 
+<!--    <bean id="userlive" class="model.UserBeanLive"></bean>-->
+
 </beans>
