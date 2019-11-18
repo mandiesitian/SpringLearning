@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component(value = "user")
+//@Component(value = "user")
 public class UserBean implements BeanNameAware, BeanFactoryAware, InitializingBean, DisposableBean {
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         System.out.println(beanFactory);

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
-@Component
+//@Component
 public class AnnontationInstance {
     @Value("abc")  //设置默认值
     private String name;

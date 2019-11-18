@@ -2,6 +2,7 @@ package IOC;
 
 import model.Person;
 import model.UserBean;
+import model.UserBeanLive;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -24,7 +25,12 @@ public class App
          */
 
         // 案列二
-        UserBean user= (UserBean) factory.getBean("user");
-        user.destroy();
+//        UserBean user= (UserBean) factory.getBean("user");
+//        user.destroy();
+
+        //案例三
+        UserBeanLive userBeanLive= (UserBeanLive) factory.getBean("userlive");
+
+
     }
 }
