@@ -29,7 +29,7 @@ public class App
 //        user.destroy();
 
         //案例三
-        UserBeanLive userBeanLive= (UserBeanLive) factory.getBean("userlive");
+//        UserBeanLive userBeanLive= (UserBeanLive) factory.getBean("userlive");
 
 
     }
